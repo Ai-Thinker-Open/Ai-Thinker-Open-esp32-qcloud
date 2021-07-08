@@ -10,6 +10,12 @@
 # <span id = "Introduction">0. 介绍</span>
 `Ai-Thinker-Open-esp32-qcloud` 是由 [安信可科技](https://www.ai-thinker.com) 推出接入 [腾讯物联网开发平台 (IoT Explorer)](https://console.cloud.tencent.com/iotexplorer) 的开发套件 。该套件依据 `IoT Explorer` 通信协议而设计，相对于 [腾讯云物联 IoT C-SDK](https://github.com/tencentyun/qcloud-iot-sdk-embedded-c)，该套件将云平台配置、配网操作封装成接口，简化了整体流程，只需完成简单的调用，即可完成配网、连云操作。同时，该套件提供了丰富的调试工具、示例代码、量产工具供你快速完成产品开发。
 
+| 支持模组 |    要求  |   购买链接  |
+| -------- | -------- | ---- |
+| 安信可 ESP32 系列模组 | 4MB FLash | https://item.taobao.com/item.htm?id=548905088891 |
+| 安信可 ESP32S2 系列模组 | 4MB FLash | https://item.taobao.com/item.htm?id=621845112434 |
+| 安信可 ESP32-C3 系列模组 | 4MB FLash | https://item.taobao.com/item.htm?id=646269575479 |
+
 - **配网方式**
 - [x] softap
     - [x] airkiss
@@ -67,42 +73,15 @@
 
 # <span id = "makefile">3. 构建&烧录&运行工程</span> 
 
-0. **提取项目文件**
+0. **项目文件**
 
-    你可以直接在 `examples` 目录下提取文件，也可以通过将 `esp-qcloud` 作为 `git` 子模块进行开发。
+     你可以直接在 `main` 目录进行开发。
 
-    1. 直接提取开发
-
-        ```shell
-        #Copy example
-        cp -r ./examples/led_light ./examples/my_project
-        
-        #Delete unnecessary files
-        cd ./examples/my_project
-        idf.py fullclean
-        ```
-
-    2. 通过 `git` 管理开发
-
-        将 `esp-qcloud` 作为 `git` 子模块进行开发，无需在此项目中复制或编辑任何文件，可更方便的维护和更新本项目。
-
-        ```shell
-        #Copy example
-        cp -r ./examples/led_light ~/my_project
-        cd ~/my_project
-
-        #Register submodule
-        git init
-        mkdir -p components
-
-        #Choice 1
-        git submodule add https://github.com/espressif/esp-qcloud.git components/qcloud
-        #Choice 2
-        git submodule add https://gitee.com/espressifsystems/esp-qcloud.git components/qcloud
-
-        #Delete unnecessary files
-        idf.py fullclean
-        ```
+     ```shell
+     #Delete unnecessary files
+     cd main
+     idf.py fullclean
+     ```
 
 
 1. **配置芯片**
