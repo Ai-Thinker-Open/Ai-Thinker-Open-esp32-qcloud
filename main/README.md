@@ -1,6 +1,12 @@
 # Smart Light 
 
-`Smart Light` 使用 `ESP32、ESP32S2` 配合 `腾讯连连小程序` 演示了一个智能灯控制方案。
+| 支持模组 |    要求  |   购买链接  |
+| -------- | -------- | ---- |
+| 安信可 ESP32 系列模组 | 4MB FLash | https://item.taobao.com/item.htm?id=548905088891 |
+| 安信可 ESP32S2 系列模组 | 4MB FLash | https://item.taobao.com/item.htm?id=621845112434 |
+| 安信可 ESP32-C3 系列模组 | 4MB FLash | https://item.taobao.com/item.htm?id=646269575479 |
+
+`Smart Light` 使用 `ESP32、ESP32S2、ESP32-C3` 配合 `腾讯连连小程序` 演示了一个智能灯控制方案。
 
 功能：
 - 通过腾讯连连小程序配网、控制
