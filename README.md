@@ -42,26 +42,25 @@
     - [x] 单一/批量 bin 生成
     - [ ] 加密
 
-# <span id = "hardwareprepare">1.硬件准备</span>
-- **模组**开发板准备  
+# <span id = "hardwareprepare">1.**模组**开发板准备</span>
 - ESP32 开发板：https://item.taobao.com/item.htm?id=548905088891
-    - ESP32-S2 开发板：https://item.taobao.com/item.htm?id=621845112434
-    - ESP32-C3 开发板（内置4MB版本）：https://item.taobao.com/item.htm?id=646269575479
+- ESP32-S2 开发板：https://item.taobao.com/item.htm?id=621845112434
+- ESP32-C3 开发板（内置4MB版本）：https://item.taobao.com/item.htm?id=646269575479
 
 # <span id = "compileprepare">2. IDF 环境搭建</span>
 
 - 可以参考 [ESP-IDF编程指南-快速入门](https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32/get-started/index.html#get-started-setup-toolchain) 快速完成工具链与环境的搭建
 - 使用 `ESP32`、`ESP32-S2` 构建工程之前需将 `ESP-IDF` 切换到 `release/v4.2 分支`，使用 `ESP32-C3` 则需要切换到 `master`。
 
-    > `ESP32-C3` 暂无 `release` 分支
+    > `ESP32-C3` 暂无 `release` 分支，目前可用的commitID：8e3e65a47b7d9b5dc4f52eb56660a748fda1884e
 
     ```shell
     cd  $IDF_PATH 
 
-    # esp32esp32s2
+    # esp32 or esp32s2
     git checkout release/v4.2 
     # esp32c3
-    git checkout master 
+    git checkout 8e3e65a47b7d9b5dc4f52eb56660a748fda1884e 
 
     git submodule update --init --recursive
     ```
